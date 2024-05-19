@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun Sentry - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-image: url('background.png'); /* Path to your background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Ensures the background image stays fixed as you scroll */
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font to all text */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .logo {
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px; /* Adjust font size for navigation links */
+    }
+
+    nav a:hover {
+      color: #f39c12; /* Change color on hover */
+    }
+
+    .content-section {
+      display: none; /* Hide all sections by default */
+    }
+
+    .content-section.active {
+      display: block; /* Show the active section */
+      background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+      animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 36px; /* Adjust font size for main heading */
+    }
+
+    h2 {
+      font-size: 28px; /* Adjust font size for section headings */
+      margin: 0 0 10px 0; /* Remove top margin, add bottom margin for spacing */
+    }
+
+    p, li {
+      font-size: 22px; /* Adjust font size for paragraphs and list items */
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    #feedback-form label {
+      font-size: 16px; /* Adjust font size for form labels */
+    }
+
+    #feedback-form input, #feedback-form textarea {
+      font-size: 14px; /* Adjust font size for form inputs and textarea */
+    }
+
+    #order-form label {
+      font-size: 16px; /* Adjust font size for order form labels */
+    }
+
+    #order-form input, #order-form select {
+      font-size: 14px; /* Adjust font size for order form inputs and select */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Sun.png" alt="Sun Sentry Logo" class="logo">
+    <h1>>>>> Solar Sentry        </h1>
+    <nav>
+      <ul>
+        <li><a href="#" data-section="home">Home</a></li>
+        <li><a href="#" data-section="features">Features</a></li>
+        <li><a href="#" data-section="benefits">Benefits</a></li>
+        <li><a href="#" data-section="about">About</a></li>
+        <li><a href="#" data-section="order">Order</a></li>
+        <li><a href="#" data-section="feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="dynamic-content">
+    <section id="home" class="content-section active">
+      <h2>Welcome to Our Solar Sentry Project</h2>
+      <p>The Sun Sentry is an innovative system designed to maximize the efficiency of solar panels by keeping them aligned with the sun.</p>
+    </section>
+
+    <section id="features" class="content-section">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Real-Time Tracking:</strong> Instantly adjusts solar panels to follow the sun's movement, optimizing energy capture throughout the day.</li>
+        <li><strong>Dual-Axis Tracking:</strong> Allows solar panels to move in two directions, both horizontally and vertically, to follow the sun more accurately and maximize energy absorption.</li>
+        <li><strong>Energy Efficiency:</strong> Enhances the performance of solar panels by ensuring they are always optimally positioned, leading to higher energy output with less waste.</li>
+        <li><strong>Sustainability:</strong> Promotes the use of renewable energy by maximizing solar power generation, reducing reliance on fossil fuels, and lowering carbon emissions.</li>
+      </ul>
+    </section>
+
+    <section id="benefits" class="content-section">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Increases solar panel efficiency and output.</li>
+        <li>Reduces energy costs and dependency on the grid.</li>
+        <li>Environmentally friendly and promotes sustainable energy practices.</li>
+        <li>Improves the lifespan and performance of solar panels through optimal positioning.</li>
+        <li>Automated Adjustments: Reduces the need for manual intervention by automatically adjusting the panels throughout the day.</li>
+        <li>Enhanced System Longevity: Keeps panels at optimal angles, reducing wear and tear and extending the lifespan of the system.</li>
+      </ul>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Us</h2>
+      <p>Solar Sentry is committed to providing cutting-edge technology for maximizing solar energy efficiency. Our innovative tracking systems ensure that solar panels are always aligned with the sun, increasing energy capture and promoting sustainable practices.</p>
+      <p>Our team of experts is dedicated to advancing renewable energy solutions and making solar power more accessible and effective for everyone.</p>
+    </section>
+
+    <section id="order" class="content-section">
+      <h2>Order Solar Sentry</h2>
+      <form id="order-form">
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" name="customer-name" required><br><br>
+        <label for="customer-email">Email:</label>
+        <input type="email" id="customer-email" name="customer-email" required><br><br>
+        <label for="customer-address">Address:</label>
+        <input type="text" id="customer-address" name="customer-address" required><br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        <label for="payment-method">Mode of Payment:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="gcash">Gcash</option>
+          <option value="cod">Cash on Delivery</option>
+        </select><br><br>
+        <input type="submit" value="Place Order">
+      </form>
+    </section>
+
+    <section id="feedback" class="content-section">
+      <h2>Feedback</h2>
+      <form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('data-section');
+        document.querySelectorAll('.content-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+      });
+    });
+
+    document.getElementById('feedback-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your feedback!');
+      this.reset();
+    });
+
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Order Completed! Thank you for choosing our product.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+	

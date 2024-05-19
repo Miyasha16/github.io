@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #ffeb3b; /* Yellow background for the header */
+  color: #333;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  margin: 0.5rem 0 0.25rem;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+
+/* Add this CSS to your existing styles.css file */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1px; /* Adjust margin as needed for spacing */
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Set height equal to width to maintain a perfect circle */
+  border-radius: 50%; /* Make the logo appear as a circle */
+  object-fit: cover; /* Ensure the entire image is visible within the circle */
+}
+
+/* Add this CSS to your existing styles.css file */
+title, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+  font-family: 'Roboto', sans-serif; /* Apply Montserrat font to body text, headings, paragraphs, lists, and links */
+}
+/* CSS code to set font size */
+body {
+  font-size: 18px; /* Sets the base font size to 16 pixels */
+}
+
+h1 {
+  font-size: 2em; /* Sets the font size of h1 elements to twice the base font size */
+}
+
+p {
+  font-size: 21px; /* Sets the font size of paragraphs to 14 pixels */
+}
+#features {
+  background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
